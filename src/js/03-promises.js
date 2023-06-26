@@ -21,9 +21,9 @@ function onPromiseCreate(e) {
   const {
     elements: { delay, step, amount },
   } = e.currentTarget;
-  const inputDelay = parseInt(delay.value);
-  const inputStep = parseInt(step.value);
-  const inputAmount = parseInt(amount.value);
+  let inputDelay = parseInt(delay.value);
+  let inputStep = parseInt(step.value);
+  let inputAmount = parseInt(amount.value);
 
   for (let i = 0; i < inputAmount; i++) {
     createPromise(i, inputDelay)
